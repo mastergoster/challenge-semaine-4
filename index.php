@@ -1,8 +1,8 @@
 <?php
 include('donnes.php');
 
-function ttc($prixttc){
-	$prixttc=$beerArray[$i][3]*1.2
+function ttc($prixht){
+	$prixttc=$prixht*1.2;
 	return $prixttc;
 }
 ?>
@@ -30,9 +30,11 @@ function ttc($prixttc){
 				<!-- Image -->
 
 				<img src="<?= $beerArray[$i][1]?>" alt="photo de biere">
-				<p></p>		
-				<p></p>
-				
+				<!-- Description -->
+				<div><p><?= $beerArray[$i][2]?></p>	</div>	
+				<!-- Prix -->
+				<div><p><?= ttc($beerArray[$i][3])?></p></div>
+
 			<?php
 			}
 			?>
